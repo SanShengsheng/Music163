@@ -1,0 +1,544 @@
+.herder{
+    height: 30px;background-color: #EFEDEE;
+    padding: 10px 14px;
+}
+
+.content{
+    background-color: #EFEDEE;
+    min-height: 100vh;
+    padding: 0 14px;
+}
+.footer{
+    background: #FFF;
+    position: fixed;
+    width: 100vw;
+    /* width: 95vw; */
+    bottom: 0;
+}
+
+
+
+
+
+/* 用户信息 */
+.User{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.usercenter{
+    display: flex;
+}
+.usercenter>.userimg{
+    --size:50px;
+    width: var(--size);
+    height: var(--size);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+}
+.usercenter>.userimg>img{
+    width: var(--size);
+    height: var(--size);
+}
+.username>h3{
+    font-size: 17px/1.5;
+}
+.usercenter>.userinfo{
+    display: flex;
+    /* 设置为行 */
+    flex-direction: column;
+    /* 使元素水平居中 */
+    justify-content: center;
+
+    margin-left: 20px;
+}
+.userinfo>.userlevel{
+    margin-top: 3px;
+}
+.userlevel>.level{
+    display: inline-block;
+    /* min-height: 20px; */
+    /* min-width: 10px ; */
+    background-color: #FFF;
+    padding: 0 8px;
+    border-radius: 18px;
+    height: 18px;
+    line-height: 16px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.userlevel>.levelsvip{
+    width: 27px;
+    overflow: hidden;
+    background: url(../icon/musicvip5.png);
+    background-size: 100% 100%;
+    vertical-align:middle;
+}
+
+
+.usermin{
+    background-color: #FFF;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 3px 0;
+    
+}
+.usermincontent{
+    display: flex;
+    justify-content:space-between;
+}
+.userminitem{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.userminright{
+    width: 10px;
+    height: 5px;
+}
+.userminitem>img{
+    --size:30px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* 用户信息结束 */
+/* ------------------------------------------------------- */
+/* 设置宫格组 */
+.grid{
+    /* padding: 10px; */
+    margin-top: 30px;
+}
+.grid>.gridlist{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.gridlist>.griditem{
+    width: 24%;
+    padding: 15px 0;
+    text-align: center;
+    
+}
+
+/* 设置文字渐变 */
+.gridlist>.griditem>.griditemicon>i{
+    color:transparent;
+    background-image: -webkit-linear-gradient(bottom,#e7190e,#EB4D44,#EB4F47,#EE817D,#EF8C89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(to top bottom,#EB4D44,#F1A09F); */
+}
+.gridlist>.griditem>.griditemtext{
+    font-size: 13px;
+    color: #555;
+}
+.gridlist>.app>.griditemicon>i{
+    color: #555;
+    background-image: #222;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #F2F2F2;
+}
+.gridlist>.app>.griditemtext::before{
+    content: ' ';
+    position:absolute;
+    display: block;
+    margin-top: 7px;
+    margin-left: 6px;
+    --size:5px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: #e7190e;
+}
+@media screen and (max-width:320px) and (min-width:300px){
+    .gridlist>.app>.griditemtext::before{
+        content: ' ';
+        position:absolute;
+        display: block;
+        margin-top: 7px;
+        margin-left:-3px;
+        --size:5px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background: #e7190e;
+    }
+}
+/* 宫格组结束 */
+/* ----------------------------------------------------- */
+/* 我喜欢我音乐 */
+
+
+.musiclove{
+    margin-top: 22px;
+    margin-bottom: 16px;
+}
+.musiclove>.musicloveinfo{
+    background-color: #FFF;
+    border-radius: 8px;
+    padding: 10px 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+    /* 我喜欢左 */
+.musicloveinfo>.musicloveinfoleft{
+    display: flex;
+    align-items: center;
+}
+.musicloveinfo>.musicloveinfoleft>.musicloveimg{
+    --size:50px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+.musicloveinfo>.musicloveinfoleft>.musicloveimg::before{
+    content: '';
+    width: 34px;
+    height: 3px;
+    /* height: 10px; */
+    background: #F3F3F3;
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 8px;
+    border-radius: 5px 5px 0 0;
+    z-index: -0;
+}
+.musicloveinfoleft>.musicloveimg>img{
+    width: var(--size);
+    height: var(--size);
+    border-radius: 10px;
+}
+.musicloveinfoleft>.musicloveimg>span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 0px;
+    color: #FFF;
+    width: var(--size);
+    height: var(--size);
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+}
+.musicloveinfoleft>.musicloveinfocontent{
+    margin-left: 10px;
+    font-weight: 100;
+    display: flex;
+    flex-direction:column;
+    max-height: 50px;
+    overflow: hidden;
+    padding: 3px 0;
+}
+.musicloveinfoleft>.musicloveinfocontent>.lovetitle{
+    /* font-size: 12px; */
+    color: #2f2f2f;
+}
+.musicloveinfoleft>.musicloveinfocontent>.lovecount{
+    font-size: 12px;
+    color: #8f8f8f;
+    margin-top: 5px;
+}
+    /* 我喜欢右 */
+.musicloveinfo>.musicloveinforight{
+    display: flex;
+    align-items: center;
+}
+.musicloveinfo>.musicloveinforight>.musicloveinfoBeckoning{
+    font-size: 10px;
+    /* padding: 2px 10px; */
+    border-radius: 30px;
+    border: 1px solid #9f9f9f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 80px;
+}
+/* 我喜欢的音乐结束 */
+
+/* 歌单内容 */
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20px; */
+    padding: 10px 0;
+}
+.tabs>.tabs-wrap{
+    --tanscolor1:#9f9f9f;
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+    color: var(--tanscolor1);
+    font-size: 17px;
+}
+.tabs>.tabs-wrap>.active{
+    color: #333;
+}
+.tabs>.tabs-wrap>.active::before{
+    content: '';
+    display: block;
+    background: linear-gradient(to right,rgba(255, 13, 0, 0.85),rgba(231, 99, 92, 0.9));
+    height: 8px;
+    width: 68px;
+    position: absolute;
+    margin-top: 14px;
+    border-radius: 30px;
+}
+.tabs>.tabs-wrap>.tabs-nav:not(:last-child):after{
+    content: ' ';
+    display: inline-block;
+    border-right: 1px solid var(--tanscolor1);
+    height: 15px;
+    width: 1px;
+    position: absolute;
+    margin-left: 7%;
+    margin-top: 3px;
+}
+.tabs>.tabs-wrap>.tabs-nav{
+    min-width: 70px;
+    width: 70px;
+    text-align: center;
+    /* border: 1px solid #333; */
+}
+
+.tabs-content{
+    padding: 0 0 20px 0;
+}
+.tabs-content-info{
+    background: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.tabs-content-info>.tabscontenttop{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: #9f9f9f;
+}
+.tabscontenttop>.tabscontenttop-left{
+    font-size: 13px;
+    /* color: #9f9f9f; */
+}
+.tabscontenttop>.tabscontenttop-right{
+    /* font-size: 13px; */
+    /* color: #9f9f9f; */
+    /* width: 50px; */
+    display: flex;
+    justify-content: space-between;
+}
+    /* 菜单选选项卡结束 */
+
+    /* 创建歌单内容开始 */
+.tabscontentcontent{
+    width: 100%;
+}
+.tabscontentcontent>.tabscontentitem{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+.song_sheet{
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+}
+.song_sheet>.ssimg,.song_sheet>.ssimg>img{
+    --size:50px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 8px;
+}
+.song_sheet>.ssinfo{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+/* .song_sheet>.ssinfo>.ssname{
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+.song_sheet{
+
+}
+
+.song_sheet>.music::before{
+    content: '';
+    width: 34px;
+    height: 3px;
+    /* height: 10px; */
+    background: #F3F3F3;
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 8px;
+    border-radius: 5px 5px 0 0;
+    z-index: -0;
+}
+.song_sheet>.ssinfo>.ssname{
+    font-weight: 600;
+    color: #555;
+}
+.song_sheet>.ssinfo>.sscount{
+    color: #8f8f8f;
+    font-size: 12px;
+    margin-top: 4px;
+}
+@media screen and (min-width:320px) and (max-width:369px){
+    .song_sheet>.ssinfo>.ssname{
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (min-width:370px) and (max-width:400px){
+    .song_sheet>.ssinfo>.ssname{
+        max-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (min-width:371px) and (max-width:420px){
+    .song_sheet>.ssinfo>.ssname{
+        max-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+    /* 创建歌单结束 */
+
+    /* 收藏歌单 */
+.Collection{}
+    /* 收藏歌单结束 */
+
+/* 歌单内容结束 */
+
+
+
+
+
+
+
+
+
+
+/* 底部播放内容, */
+.musicplay{
+
+}
+.playcontent{
+    /* padding: 10px 0; */
+    justify-content: space-between;
+    height: 50px;
+    background: #FCFCFC;
+    /* padding: 8px 0; */
+}
+.musicplay *{
+    display: flex;
+    align-items: center;
+}
+.songimg{
+    --size:35px;
+    width: var(--size);
+    height: var(--size);
+    min-width: var(--size);
+    min-height: var(--size);
+    max-width: var(--size);
+    max-height: var(--size);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #000;
+    position: relative;
+    margin-top: -10px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.songimg>img{
+    width: 100%;
+    height: 100%;
+}
+.playright{
+    margin-right: 20px;
+}
+.playright>.btnplay{
+    margin-right: 10px;
+}
+@media screen and (min-width:414px){
+    .song_descibe>p{
+        display: block;
+        width: 210px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (max-width:413px) and (min-width:375px) {
+    .song_descibe>p{
+        display: block;
+        width: 173px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (min-width:320px) and (max-width:374){
+    .song_descibe>p{
+        display: block;
+        width: 125px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+/* 播放结束 */
+/* 底部菜单标签  .active为被选中 */
+.tabbar{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 13px;
+    padding: 5px 0;
+    /* border: 1px solid #333; */
+}
+.tabbar>.tabitem>.tabitem-icon{
+    width: var(--tabicon-size);
+    height: var(--tabicon-size);
+    line-height: var(--tabicon-size);
+    border-radius: 50%;
+    color: var(--tabicon-color);
+}
+
+.tabbar>.tabitem>.tabitem-txt{
+    color: var(--tabtext-color);
+}
+.tabbar>.active>.tabitem-icon{
+    background: var(--tabactiveicon-backgroundcolor);
+    color: var(--tabactiveicon-color);
+    width: var(--tabicon-size);
+    height: var(--tabicon-size);
+    line-height: var(--tabicon-size);
+    border-radius: 50%;
+}
+.tabbar>.active>.tabitem-txt{
+    color: var(--tabactivetext-color);
+}

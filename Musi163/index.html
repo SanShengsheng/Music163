@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="haha" style="height: 2010px;width: 100vw;background: #888;">
+
+    </div>
+    <p id="pp">哈哈哈</p>
+<script>
+    window.onload = function(){
+        document.querySelector('#haha').onclick = function(){
+            // console.log(document.querySelector('#pp').offsetTop)
+            let a =2003;
+            window.scrollTo(0,200);
+            console.log(a/100)
+            // setoffsettop(2)
+        }
+    }
+    function setoffsettop(i){
+        
+        setTimeout(function(){
+            alert('aaa')
+        },1000)
+    } 
+</script>
+</body>
+</html>

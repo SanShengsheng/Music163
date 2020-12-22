@@ -1,0 +1,88 @@
+*{
+  /* font-size: 14px; */
+  margin: 0;
+  padding: 0;
+  /* 给添加滚动过度 */
+  scroll-behavior: smooth;
+}
+.page{
+  scroll-behavior: smooth;
+}
+:root{
+    --tabactivetext-color  :#EB5A52;
+    --tabactiveicon-backgroundcolor:     linear-gradient(to top right, #EB4D44,#EC5C59,#F1A09F);
+    /* --tabactiveicon-backgroundcolor:     linear-gradient(to top right, #EB4D44,#EC5C59,#EE8582); */
+    --tabactiveicon-color:      #FFF;
+    --tabicon-color:        #969696;
+    --tabtext-color:       #969696;
+    --tabicon-size:    35px;
+}
+
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../icon/iconfont.eot');
+    src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../icon/iconfont.woff2') format('woff2'),
+        url('../icon/iconfont.woff') format('woff'),
+        url('../icon/iconfont.ttf') format('truetype'),
+        url('../icon/iconfont.svg#iconfont') format('svg');
+  }
+  .iconfontheaderdefault {
+    font-family: "iconfont" !important;
+    font-size: 28px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .iconfontbar {
+    font-family: "iconfont" !important;
+    font-size: 28px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .iconplaybar {
+    font-family: "iconfont" !important;
+    font-size: 38px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .iconfontuserleft {
+    font-family: "iconfont" !important;
+    font-size: 28px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .iconfontgrid{
+    font-family: "iconfont" !important;
+    font-size: 45px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;     
+  }
+  .iconfontlove{
+    font-family: "iconfont" !important;
+    font-size: 28px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+  }
+  .iconfontloveright{
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+    position:relative;
+    top: 0px;
+  }
+  .iconfonttabscontenttop{
+    font-family: "iconfont" !important;
+    font-size: 24px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+  }

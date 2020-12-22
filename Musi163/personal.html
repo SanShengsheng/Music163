@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的信息</title>
+
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 引入本页面css -->
+    <link rel="stylesheet" href="./css/personal.css">
+
+    <!-- 引入本页面js -->
+    <script src="./js/personal.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="herder">
+            <i class="iconfontheaderdefault">&#xe6ef;</i>
+        </div>
+        <div class="content">
+            <!-- 个人信息如头像,个人昵称,等级等信息 -->
+            <div class="User">
+                <div class="usercenter">
+                    <div class="userimg">
+                        <img src="./img/user/userimg.jpg" alt="">
+                    </div>
+                    <div class="userinfo">
+                        <div class="username">
+                            <h3>睡不醒的小辉</h3>
+                        </div>
+                        <div class="userlevel">
+                            <span class="level levelsvip"></span><span class="level">Lv.9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="userhref"><i class="iconfontuserleft">&#xe748;</i></div>
+            </div>
+
+            <div class="usermin" style="display: none;">
+                <div class="usermincontent">
+                    <div class="userminleft">
+                        <i class="iconfontheaderdefault">&#xe6ef;</i>
+                    </div>
+                    <div class="userminitem">
+                        <img src="./img/user/userimg-min.jpg" alt="">
+                        <p>睡不醒的小辉</p>
+                    </div>
+
+                    <div class="userminright"></div>
+                </div>
+            </div>
+            <!-- 个人信息结束 -->
+
+
+            <!-- 宫格组 -->
+            <div class="grid">
+                <div class="gridlist">
+                    <div class="griditem">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe82c;</i></div>
+                        <div class="griditemtext"><span>本地/下载</span></div>
+                    </div>
+                    <div class="griditem">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe781;</i></div>
+                        <div class="griditemtext"><span>云盘</span></div>
+                    </div>
+                    <div class="griditem">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe86d;</i></div>
+                        <div class="griditemtext"><span>已购</span></div>
+                    </div>
+                    <div class="griditem">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe72f;</i></div>
+                        <div class="griditemtext"><span>最近播放</span></div>
+                    </div>
+
+                    <div class="griditem">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe825;</i></div>
+                        <div class="griditemtext"><span>我的好友</span></div>
+                    </div>
+                    <div class="griditem">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe884;</i></div>
+                        <div class="griditemtext"><span>收藏和赞</span></div>
+                    </div>
+                    <div class="griditem">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe8b7;</i></div>
+                        <div class="griditemtext"><span>我的播客</span></div>
+                    </div>
+                    <div class="griditem app">
+                        <div class="griditemicon"><i class="iconfontgrid">&#xe810;</i></div>
+                        <div class="griditemtext"><span>音乐应用</span></div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- 宫格组结束 -->
+
+            <!-- 我喜欢的音乐 -->
+            <div class="musiclove">
+                <div class="musicloveinfo">
+                    <div class="musicloveinfoleft">
+                        <div class="musicloveimg">
+                            <img src="./img/user/userimg-min.jpg" alt="">
+                            <span><i class="iconfontlove">&#xe721;</i></span>
+                        </div>
+                        <div class="musicloveinfocontent">
+                            <h4 class="lovetitle">我喜欢的音乐</h4>
+                            <p class="lovecount"><span>104</span> 首</p>
+                        </div>
+                    </div>
+                    <div class="musicloveinforight">
+                        <div class="musicloveinfoBeckoning">
+                            <i class="iconfontloveright">&#xe8a8;</i> <span>心动模式</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 我喜欢的音乐结束 -->
+
+            <!-- 我的歌单内容 -->
+            <div class="tabs " id="tabsinfo" style="">
+                <div class="tabs-wrap" id="tabheater" style="width: 90%;">
+                    <div id="tabcreate" class="tabs-nav active" >创建歌单</div>
+                    <div id="tabsong_sheet" class="tabs-nav">收藏歌单</div>
+                    <div id="tabpo" class="tabs-nav">歌单助手</div>
+                </div>
+            </div>
+            <!-- 歌单内容详情 -->
+            <div class="tabs-content">
+                <div class="tabs-content-info" id="sscreate">
+                    <div class="tabscontenttop">
+                        <div class="tabscontenttop-left">
+                            <p>创建歌单(<span>1</span>个)</p>
+                        </div>
+                        <div class="tabscontenttop-right">
+                            <i class="iconfonttabscontenttop">&#xe8a1;</i><i class="iconfonttabscontenttop" style="">&#xe77e;</i>
+                        </div>
+                    </div>
+                    <!-- 个人创建歌单 -->
+                    <div class="tabscontentcontent">
+                        <div class="tabscontentitem" onclick="tabaddchild(this)">
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+
+                            <div class="song_sheet">
+                                <div class="ssimg"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">导入外部歌单</h4>
+                                    <!-- <p class="sscount"><span>0</span>首</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 个人歌单内容结束 -->
+                </div>
+                    <!-- 个人创建歌单结束 -->
+                    
+                <!-- 收藏歌单 -->
+                <div class="tabs-content-info" id="song_sheet">
+                    <div class="tabscontenttop">
+                        <div class="tabscontenttop-left">
+                            <p>收藏歌单(<span>6</span>个)</p>
+                        </div>
+                        <div class="tabscontenttop-right">
+                            <i class="iconfonttabscontenttop" style="">&#xe77e;</i>
+                        </div>
+                    </div>
+                    <!-- 收藏的歌单 -->
+                    <div class="tabscontentcontent">
+                        <div class="tabscontentitem"  onclick="tabaddchild(this)">
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 收藏歌单内容结束 -->
+                </div>
+                <!-- 收藏歌单结束 -->
+
+                <div class="tabs-content-info" id="po">
+                    <div class="tabscontenttop">
+                        <div class="tabscontenttop-left">
+                            <p>歌单助手</p>
+                        </div>
+                        <div class="tabscontenttop-right"></div>
+                    </div>
+                    <!-- 个人创建歌单 -->
+                    <div class="tabscontentcontent">
+                        <div class="tabscontentitem"  onclick="tabaddchild(this)">
+                            <div class="song_sheet">
+                                <div class="ssimg music"><img src="./img/musicdefault.jpg" alt=""></div>
+                                <div class="ssinfo">
+                                    <h4 class="ssname">点我可以添加新歌单,快点我.</h4>
+                                    <p class="sscount"><span>0</span>&nbsp;首</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- 个人歌单内容结束 -->
+                </div>
+
+                
+            </div>
+            <!-- 歌单内容结束 -->
+
+            <div style="height: 50px;"></div>
+        </div>
+        <!-- 内容结束 -->
+
+
+        <!-- 底部菜单栏 -->
+        <div class="footer">
+            <div class="musicplay">
+                <div class="playcontent">
+                    <div class="playleft">
+                        <div class="songimg">
+                            <img src="./img/user/userimg-min.jpg" alt="">
+                        </div>
+                        <div class="song_descibe">
+                            <p>你要相信这不是最后一天(Live)-薛之谦</p>
+                        </div>
+                    </div>
+                    <div class="playright">
+                        <div class="btnplay">
+                            <i class="iconplaybar">&#xe701;</i>
+                        </div>
+                        <div class="playlist">
+                            <i class="iconplaybar">&#xe8f6;</i>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tabbar">
+                <div class="tabitem">
+                    <div class="tabitem-icon"><i class="iconfontbar">&#xe8aa;</i></div>
+                    <div class="tabitem-txt"><span>发现</span></div>
+                </div>
+                <div class="tabitem">
+                    <div class="tabitem-icon"><i class="iconfontbar">&#xe8b7;</i></div>
+                    <div class="tabitem-txt"><span>播客</span></div>
+                </div>
+                <div class="tabitem active">
+                    <div class="tabitem-icon"><i class="iconfontbar">&#xe8cd;</i></div>
+                    <div class="tabitem-txt"><span>我的</span></div>
+                </div>
+                <div class="tabitem">
+                    <div class="tabitem-icon"><i class="iconfontbar">&#xe8ae;</i></div>
+                    <div class="tabitem-txt"><span>K歌</span></div>
+                </div>
+                <div class="tabitem">
+                    <div class="tabitem-icon"><i class="iconfontbar">&#xe771;</i></div>
+                    <div class="tabitem-txt"><span>云村</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
